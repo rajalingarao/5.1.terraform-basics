@@ -10,7 +10,7 @@ variable "instance_type" {
     type = string  
 }
 variable "instance_name" {
-    default = "backend"
+    default = "db"  # "backend"
 }
 
 variable "tags" {
