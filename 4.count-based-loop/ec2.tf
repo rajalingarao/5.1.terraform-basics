@@ -1,13 +1,11 @@
 resource "aws_instance" "create_ec2" {
-
-    #count = 3
-    count = length(var.instance_names)
+    count = 3  # for static value
+    #count = length(var.instance_names) # for dynamic selection value.
     ami  ="ami-0220d79f3f480ecf5"
     instance_type = "t3.micro"
     vpc_security_group_ids = [aws_security_group.allow_ssh.id]
     tags = {
       Name = var.instance_names[count.index]
-      #Name = "Count based loop - ec2"
     }
     # root_block_device {
     #   volume_size = 50  

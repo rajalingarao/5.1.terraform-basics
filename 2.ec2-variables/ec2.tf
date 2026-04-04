@@ -27,7 +27,7 @@ resource "aws_instance" "create_ec2" {
         cidr_blocks = var.allowed_cidr
     }
     tags = {
-      Name  = "allow_ssh-"
+      Name  = "allow_ssh"
       Created-By = "Lingaiah"
     }  
   }
